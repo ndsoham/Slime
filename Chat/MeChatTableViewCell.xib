@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="meChatTableViewCell" id="KGk-i7-Jjw" customClass="MeChatTableViewCell" customModule="Slime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L86-Qc-ZJ2">
+                        <rect key="frame" x="0.0" y="4" width="316" height="59"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZG-fE-IxO">
+                                <rect key="frame" x="0.0" y="0.0" width="243" height="59"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbS-dk-J7E">
+                                        <rect key="frame" x="0.0" y="10" width="243" height="39"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl5-xN-vF6">
+                                        <rect key="frame" x="0.0" y="19.5" width="135" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="yl5-xN-vF6" firstAttribute="leading" secondItem="dZG-fE-IxO" secondAttribute="leading" id="dma-E7-2kd"/>
+                                    <constraint firstItem="WbS-dk-J7E" firstAttribute="top" secondItem="dZG-fE-IxO" secondAttribute="top" constant="10" id="lOv-0g-wB7"/>
+                                    <constraint firstItem="WbS-dk-J7E" firstAttribute="leading" secondItem="dZG-fE-IxO" secondAttribute="leading" id="nFw-pN-e3U"/>
+                                    <constraint firstAttribute="bottom" secondItem="WbS-dk-J7E" secondAttribute="bottom" constant="10" id="nqV-93-LpA"/>
+                                    <constraint firstItem="yl5-xN-vF6" firstAttribute="centerY" secondItem="dZG-fE-IxO" secondAttribute="centerY" id="sIj-qD-Da8"/>
+                                    <constraint firstAttribute="trailing" secondItem="WbS-dk-J7E" secondAttribute="trailing" id="wAH-fR-Z99"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slime" translatesAutoresizingMaskIntoConstraints="NO" id="Zew-lA-jM7">
+                                <rect key="frame" x="251" y="0.0" width="65" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Cmg-CQ-Ajq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="L86-Qc-ZJ2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="GxF-VL-PIJ"/>
+                    <constraint firstAttribute="trailing" secondItem="L86-Qc-ZJ2" secondAttribute="trailing" constant="4" id="I1f-1e-YLj"/>
+                    <constraint firstAttribute="bottom" secondItem="L86-Qc-ZJ2" secondAttribute="bottom" constant="4" id="flU-nG-1Fc"/>
+                    <constraint firstItem="L86-Qc-ZJ2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="mcR-Bd-tPn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="H2p-sc-9uM" id="ilC-Ez-ht9"/>
+                <outlet property="bubble" destination="WbS-dk-J7E" id="YIT-94-ewQ"/>
+                <outlet property="bubbleContainer" destination="dZG-fE-IxO" id="vg1-OL-MF3"/>
+                <outlet property="messageLabel" destination="yl5-xN-vF6" id="e95-yX-AR9"/>
+            </connections>
+            <point key="canvasLocation" x="-165.21739130434784" y="93.75"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Slime" width="166.5" height="166.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
